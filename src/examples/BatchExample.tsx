@@ -12,7 +12,7 @@ import { usePrepareContractBatchWrite, useContractBatchWrite } from "@zerodev/wa
 
 const nftAddress = '0x34bE7f35132E97915633BC1fc020364EA5134863'
 
-const description = `With ZeroDev, you can execute multiple transactions as a single transaction, so you get to save on confirmation time and gas cost. It's also safer because these transactions either all execute or all revert, no in-between, which is a property known as "atomicity."
+const description = `Execute multiple transactions as a single transaction, so you get to save on confirmation time and gas cost. It's also safer because these transactions either all execute or all revert, no in-between, which is a property known as "atomicity."
 
 In this example, we will be sending two "Mint" transactions in one.`
 

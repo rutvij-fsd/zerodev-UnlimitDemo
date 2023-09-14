@@ -20,6 +20,9 @@ module.exports = function override(config) {
     }),
   ]);
   config.ignoreWarnings = [/Failed to parse source map/];
+  config.stats = {
+    warningsFilter: /Module not found: Error: Can't resolve/
+  };
   config.module.rules.push({
     test: /\.(js|mjs|jsx)$/,
     enforce: "pre",
