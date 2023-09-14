@@ -3,11 +3,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import {
-  GateFiEventTypes,
   GateFiDisplayModeEnum,
   GateFiSDK,
 } from "@gatefi/js-sdk";
 import { FC, useRef, useEffect, useState, ChangeEvent, FormEvent } from "react";
+import crypto from 'crypto-browserify';
 
 const OnrampExample: React.FC = () => {
   const [showIframe, setShowIframe] = useState(false); // state to control iframe visibility
@@ -26,7 +26,7 @@ const OnrampExample: React.FC = () => {
 
   // Function to create a new overlay SDK instance
   const createOverlaySdkInstance = () => {
-    const randomString = require("crypto").randomBytes(32).toString("hex");
+    const randomString = crypto.randomBytes(32).toString("hex");
 
     overlayInstanceSDK.current =
       typeof document !== "undefined"
@@ -87,7 +87,7 @@ const OnrampExample: React.FC = () => {
 
   // Function to create a new embed SDK instance
   const createEmbedSdkInstance = () => {
-    const randomString = require("crypto").randomBytes(32).toString("hex");
+    const randomString = crypto.randomBytes(32).toString("hex");
 
     embedInstanceSDK.current =
       typeof document !== "undefined"
