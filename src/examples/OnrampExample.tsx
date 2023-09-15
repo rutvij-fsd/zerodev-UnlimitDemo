@@ -8,6 +8,8 @@ import {
 } from "@gatefi/js-sdk";
 import { FC, useRef, useEffect, useState, ChangeEvent, FormEvent } from "react";
 import crypto from 'crypto-browserify';
+import { Page } from '../Page'
+
 
 const OnrampExample: React.FC = () => {
   const [showIframe, setShowIframe] = useState(false); // state to control iframe visibility
@@ -116,46 +118,104 @@ const OnrampExample: React.FC = () => {
   };
 
   return (
-    <>
+    <Page 
+    title={"Onramp"} 
+    description={"Onramp users with our SDK or Hosted Flows"} 
+    docs={"https://docs.gatefi.com/docs/gatefi-docs/7p34n1uhrzlg8-hosted-mode-integration"}
+  >
+
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+
+      {/* Buttons with modern styling */}
       <div
         style={{
           display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
+          justifyContent: "center",
+          gap: "10px",
+          marginTop: "10px",
         }}
       >
-        <h2>Unlimit Crypto</h2>
-
-        <div
+        <button 
+          onClick={handleOnClick} 
           style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "10px",
-            marginTop: "10px",
+            background: 'rgb(201, 247, 58)',
+            border: 'none',
+            borderRadius: '5px',
+            padding: '10px 20px',
+            fontSize: '1rem',
+            cursor: 'pointer',
+            transition: '0.3s',
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+            fontWeight: 'bold',
+            color: 'black'
           }}
+          onMouseOver={(e) => e.currentTarget.style.opacity = '0.7'}
+          onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
         >
-          <button onClick={handleOnClick}>Overlay</button>
-          <button onClick={handleOnClickEmbed}>Embed</button>
-          {/* <button onClick={handleOnClick1}>Buy Asset API GET</button> */}
-          {/* <button onClick={handleOnClickBuyAsset}>Buy Asset API PROD</button> */}
-          <button onClick={handleHostedFlowClick}>Hosted Flow</button>
-        </div>
-
-        {showIframe && (
-          <iframe
-            title="Unlimit Crypto"
-            src="https://onramp-sandbox.gatefi.com/?merchantId=9e34f479-b43a-4372-8bdf-90689e16cd5b"
-            style={{ width: "100%", height: "600px", margin: "10px" }}
-          />
-        )}
-
-        <div id="overlay-button"></div>
-        <div id="embed-button"></div>
+          Overlay
+        </button>
+        <button 
+          onClick={handleOnClickEmbed} 
+          style={{
+            background: 'rgb(201, 247, 58)',
+            border: 'none',
+            borderRadius: '5px',
+            padding: '10px 20px',
+            fontSize: '1rem',
+            cursor: 'pointer',
+            transition: '0.3s',
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+            fontWeight: 'bold',
+            color: 'black'
+          }}
+          onMouseOver={(e) => e.currentTarget.style.opacity = '0.7'}
+          onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
+        >
+          Embed
+        </button>
+        <button 
+          onClick={handleHostedFlowClick} 
+          style={{
+            background: 'rgb(201, 247, 58)',
+            border: 'none',
+            borderRadius: '5px',
+            padding: '10px 20px',
+            fontSize: '1rem',
+            cursor: 'pointer',
+            transition: '0.3s',
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+            fontWeight: 'bold',
+            color: 'black'
+          }}
+          onMouseOver={(e) => e.currentTarget.style.opacity = '0.7'}
+          onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
+        >
+          Hosted Flow
+        </button>
       </div>
-    </>
-  );
+  
+      {showIframe && (
+        <iframe
+          title="Unlimit Crypto"
+          src="https://onramp-sandbox.gatefi.com/?merchantId=9e34f479-b43a-4372-8bdf-90689e16cd5b"
+          style={{ width: "100%", height: "600px", margin: "10px" }}
+        />
+      )}
+  
+      <div id="overlay-button"></div>
+      <div id="embed-button"></div>
+    </div>
+    </Page>
 
-  // return <div>Hello from OnrampExample</div>;
+  );
+  
+
 };
 
 export default OnrampExample;

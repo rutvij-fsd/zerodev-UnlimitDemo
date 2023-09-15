@@ -14,7 +14,8 @@ const nftAddress = '0x34bE7f35132E97915633BC1fc020364EA5134863'
 
 const description = `Execute multiple transactions as a single transaction, so you get to save on confirmation time and gas cost. It's also safer because these transactions either all execute or all revert, no in-between, which is a property known as "atomicity."
 
-In this example, we will be sending two "Mint" transactions in one.`
+
+In this example, we'll send two "Mint" transactions together. Current smart contracts won't work with this demo, but you can deploy your own using the demo contracts in the code as a reference in Mumbai Block Explorer.`
 
 export function BatchExample() {
   const { address } = useAccount();

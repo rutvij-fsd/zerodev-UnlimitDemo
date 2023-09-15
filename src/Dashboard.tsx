@@ -10,7 +10,7 @@ import {
     Group,
     ScrollArea,
 } from '@mantine/core';
-import { ReactComponent as ZeroDevLogo } from './resources/assets/images/logo.svg';
+import { ReactComponent as UnlimitLogo } from './resources/assets/images/logo.svg';
 import { useMediaQuery } from '@mantine/hooks';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { Link, useLocation } from 'react-router-dom';
@@ -102,7 +102,7 @@ export function Dashboard({ children, links }: DashboardProps) {
                         {
                             matches ? <MediaQuery largerThan={"sm"} styles={{ paddingLeft: 20, paddingRight: 20 }}>
                                 <Group className={classes.header} position="apart">
-                                    <ZeroDevLogo width={'100%'} />
+                                    <UnlimitLogo width={'100%'} />
                                 </Group>
                             </MediaQuery> : null
                         }
@@ -136,7 +136,7 @@ export function Dashboard({ children, links }: DashboardProps) {
                                 mr="sm"
                             />
 
-                            <ZeroDevLogo height={30} width={116} />
+                            <UnlimitLogo height={30} width={116} />
                         </div>
                     </Header>
                 </MediaQuery>

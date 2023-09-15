@@ -9,6 +9,7 @@ import { SponsoredGasExample } from './examples/SponsoredGasExample';
 import { BatchExample } from './examples/BatchExample';
 import OnrampExample from './examples/OnrampExample';
 import EndpointExamples from './examples/EndpointExamples';
+// import Experiment from './examples/Experiment';
 
 
 const links = [
@@ -16,6 +17,7 @@ const links = [
   { path: '/bundle', label: 'Bundle Transactions', element: <BatchExample /> },
   { path: '/OnrampExample', label: 'Onramp', element: <OnrampExample /> },
   { path: '/EndpointExamples', label: 'API Endpoints', element: <EndpointExamples /> },
+  // { path: '/Experiment', label: 'Experiment', element: <Experiment /> },
 ];
 
 const router = createBrowserRouter([

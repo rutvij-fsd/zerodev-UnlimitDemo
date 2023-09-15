@@ -12,7 +12,8 @@ import { Page } from '../Page'
 
 const description = `Pay gas for your users, so they don't have to buy ETH before using your app.
 
-Try minting some NFTs below, without paying gas!`
+Try minting some NFTs below, without paying gas! 
+Current smart contracts won't work with this demo, but you can deploy your own using these demo contracts as a reference in Mumbai Block Explorer.`
 
 export function SponsoredGasExample() {
   const { address } = useAccount();
