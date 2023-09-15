@@ -113,7 +113,7 @@ const EndpointExamples: React.FC = () => {
     const queryString = new URLSearchParams(form).toString();
 
     const response = await fetch(
-      `http://localhost:3000/api/proxy?endpoint=/onramp/v1/configuration`,
+      `/api/proxy?endpoint=/onramp/v1/configuration`,
       {
         method: "GET",
         headers: {
@@ -129,7 +129,7 @@ const EndpointExamples: React.FC = () => {
 
   const getOrders = async (params: string) => {
     const response = await fetch(
-      `http://localhost:3000/api/proxy?endpoint=/onramp/v1/orders&${params}`,
+      `/api/proxy?endpoint=/onramp/v1/orders&${params}`,
       {
         method: "GET",
         redirect: "follow",
@@ -160,7 +160,7 @@ const EndpointExamples: React.FC = () => {
     let signature3 = calcAuthSigHash(dataVerify3);
 
     const response = await fetch(
-      `http://localhost:3000/api/proxy?endpoint=/onramp/v1/orders/${customOrderId}&walletAddress=${walletAddress}`,
+      `/api/proxy?endpoint=/onramp/v1/orders/${customOrderId}&walletAddress=${walletAddress}`,
       {
         method: "GET",
         redirect: "follow",
@@ -182,7 +182,7 @@ const EndpointExamples: React.FC = () => {
     const randomString = crypto.randomBytes(32).toString("hex");
     const newWindow = window.open("", "_blank");
     const response = await fetch(
-      `http://localhost:3000/api/proxy?endpoint=/onramp/v1/buy&amount=23&crypto=ETH&fiat=USD&orderCustomId=${randomString}&partnerAccountId=9e34f479-b43a-4372-8bdf-90689e16cd5b&payment=BANKCARD&redirectUrl=https://www.google.com/&region=US&walletAddress=0xc458f721D11322E36f781a9C58055de489178BF2`,
+      `/api/proxy?endpoint=/onramp/v1/buy&amount=23&crypto=ETH&fiat=USD&orderCustomId=${randomString}&partnerAccountId=9e34f479-b43a-4372-8bdf-90689e16cd5b&payment=BANKCARD&redirectUrl=https://www.google.com/&region=US&walletAddress=0xc458f721D11322E36f781a9C58055de489178BF2`,
       {
         redirect: "follow",
       }
@@ -207,7 +207,7 @@ const EndpointExamples: React.FC = () => {
     // Build the URL query string from the form values
     const queryString = new URLSearchParams(form).toString();
     const response = await fetch(
-      `http://localhost:3000/api/proxy?endpoint=/onramp/v1/quotes&${queryString}`,
+      `/api/proxy?endpoint=/onramp/v1/quotes&${queryString}`,
       {
         method: "GET",
         redirect: "follow",
