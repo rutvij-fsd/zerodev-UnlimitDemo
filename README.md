@@ -19,3 +19,4 @@ vercel dev
 ```
 
 Now the demo should be running on localhost!
+![image](https://github.com/Danimal01/zerodev-danimalDemo/assets/83383196/042ccc3d-5e0b-457e-a23f-086494198bd2)
