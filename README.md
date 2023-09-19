@@ -1,13 +1,8 @@
-# ZeroDev Demo
+# Unlimit Crypto & Zero Dev Account Abstraction Wallets
 
-A demo of various ZeroDev features.  Check out [our docs](https://docs.zerodev.app/) to learn more.
+Check out [Unlimit Crypto's docs](https://docs.zerodev.app/) to learn more.
+Check out [Zero Dev's docs](https://docs.zerodev.app/) to learn more.
 
-## Key ZeroDev Features
-
-- Generate smart wallets utilizing a wide range of authentication methods.
-- Empower your users by shouldering gas costs or providing the option to pay gas in ERC20 tokens.
-- Streamline operations with batch transactions or automated transactions.
-- Integrate additional smart wallet functionalities through Solidity plugins.
 
 ## Getting Started
 
@@ -16,11 +11,12 @@ Head to the [ZeroDev dashboard](https://dashboard.zerodev.app/).  Here, create a
 With your project set up, follow these simple steps to run the demo locally:
 
 ```bash
-git clone https://github.com/zerodevapp/zerodev-demo
-cd zerodev-demo
-yarn
+git clone https://github.com/Danimal01/zerodev-danimalDemo
+cd zerodev-danimalDemo
+yarn install
 export REACT_APP_ZERODEV_PROJECT_ID="your-project-id"
-npm start
+vercel dev
 ```
 
 Now the demo should be running on localhost!
+![image](https://github.com/Danimal01/zerodev-danimalDemo/assets/83383196/042ccc3d-5e0b-457e-a23f-086494198bd2)
