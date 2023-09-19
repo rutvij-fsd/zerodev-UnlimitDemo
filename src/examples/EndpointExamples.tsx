@@ -182,7 +182,7 @@ const EndpointExamples: React.FC = () => {
     const randomString = crypto.randomBytes(32).toString("hex");
     const newWindow = window.open("", "_blank");
     const response = await fetch(
-      `/api/proxy?endpoint=/onramp/v1/buy&amount=23&crypto=ETH&fiat=USD&orderCustomId=${randomString}&partnerAccountId=9e34f479-b43a-4372-8bdf-90689e16cd5b&payment=BANKCARD&redirectUrl=https://www.google.com/&region=US&walletAddress=0xc458f721D11322E36f781a9C58055de489178BF2`,
+      `/api/proxy?endpoint=/onramp/v1/buy&amount=23&crypto=ETH&fiat=USD&orderCustomId=${randomString}&partnerAccountId=9e34f479-b43a-4372-8bdf-90689e16cd5b&payment=BANKCARD&redirectUrl=https://www.google.com/&region=US&walletAddress=0xD137ED31B2781B2cB1dDe432357D3DAce655eB40`,
       {
         redirect: "follow",
       }
