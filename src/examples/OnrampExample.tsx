@@ -37,12 +37,11 @@ const OnrampExample: React.FC = () => {
 
   const handleCloseEmbed = () => {
     embedInstanceSDK.current?.destroy();
-    embedInstanceSDK.current = null; // Set the instance to null after destroying it
+    embedInstanceSDK.current = null;
     setShowIframe(false);
 };
 
   const handleOnClick = () => {
-    // Instantiate and show the overlay only when the button is clicked
     if (overlayInstanceSDK.current) {
       if (isOverlayVisible) {
         overlayInstanceSDK.current.hide();
@@ -191,7 +190,7 @@ const OnrampExample: React.FC = () => {
         <div
           style={{
             position: "relative",
-            border: showIframe ? "2px solid white" : "none",  // This line is modified
+            border: showIframe ? "2px solid white" : "none",
 
             width: "100%", 
             height: "600px", 
