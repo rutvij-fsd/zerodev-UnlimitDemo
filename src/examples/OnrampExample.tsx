@@ -8,7 +8,7 @@ import crypto from "crypto-browserify";
 import { Page } from "../Page";
 
 const OnrampExample: React.FC = () => {
-  const [showIframe, setShowIframe] = useState(false); // state to control iframe visibility
+  const [showIframe, setShowIframe] = useState(false);
   const overlayInstanceSDK = useRef<GateFiSDK | null>(null);
   const embedInstanceSDK = useRef<GateFiSDK | null>(null);
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
