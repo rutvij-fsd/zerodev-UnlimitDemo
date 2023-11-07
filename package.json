@@ -6,7 +6,7 @@
     "@alchemy/aa-core": "^0.1.0-alpha.24",
     "@alchemy/aa-ethers": "^0.1.0-alpha.24",
     "@emotion/react": "^11.10.5",
-    "@gatefi/js-sdk": "^0.12.2",
+    "@gatefi/js-sdk": "0.13.2",
     "@mantine/core": "^5.10.2",
     "@mantine/hooks": "^5.10.2",
     "@mantine/notifications": "^5.10.2",

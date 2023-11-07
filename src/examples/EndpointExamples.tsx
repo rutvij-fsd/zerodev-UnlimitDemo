@@ -87,7 +87,7 @@ const EndpointExamples: React.FC = () => {
     return CryptoJS.enc.Hex.stringify(hash);
   }
 
-  console.log(calcAuthSigHash(dataVerify));
+  console.log('check meeeee conffig prod', calcAuthSigHash(dataVerify));
 
   console.log("Quotes Sig Test", calcAuthSigHash(dataVerify1));
   console.log(calcAuthSigHash(dataVerify2));

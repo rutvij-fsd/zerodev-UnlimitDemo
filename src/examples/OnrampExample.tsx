@@ -2,7 +2,7 @@
 /* eslint-disable no-useless-concat */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
-import { GateFiDisplayModeEnum, GateFiSDK } from "@gatefi/js-sdk";
+import { GateFiDisplayModeEnum, GateFiSDK, GateFiLangEnum } from "@gatefi/js-sdk";
 import { FC, useRef, useEffect, useState, ChangeEvent, FormEvent } from "react";
 import crypto from "crypto-browserify";
 import { Page } from "../Page";
@@ -56,9 +56,11 @@ const OnrampExample: React.FC = () => {
         merchantId: "9e34f479-b43a-4372-8bdf-90689e16cd5b",
         displayMode: GateFiDisplayModeEnum.Overlay,
         nodeSelector: "#overlay-button",
+        lang: GateFiLangEnum.es_PE,
         isSandbox: true,
+        successUrl:"https://www.google.com/",
         walletAddress: "bc1q5z426v3ux753fjm2xwda4gp62f89w0f7uvfrfl",
-        email: "testoooor@gmail.com",
+        // email: "testoooor@gmail.com",
         externalId: randomString,
         defaultFiat: {
           currency: "EUR",
